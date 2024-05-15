@@ -12,15 +12,13 @@
   --light: #F3F3F3;
   --dark: #2B3541;
   --accent: #FBF138;
-  --shadow-rgb: 186, 180, 69;
-  --gradient-rgb: 253, 249, 182;
 
   --tr: .2s;
 }
 
-body {
+html, body {
   max-width: 1920px;
-
+  /* height: 100%; */
 }
 
 a {
@@ -28,7 +26,7 @@ a {
 }
 
 .container {
-  max-width: 1142px;
+  max-width: 1174px;
   width: 100%;
   margin: 0 auto;
   padding-left: 15px;
@@ -58,7 +56,7 @@ a {
 .nav {
   flex-grow: 1;
   display: flex;
-  margin-top: 2px;
+  margin-top: 3px;
   display: flex;
   gap: 54px;
 }
@@ -106,4 +104,104 @@ a {
   left: -13px;
   background-color: var(--accent);
   z-index: -1;
+}
+
+/* Hero */
+
+.hero {
+  /* height: calc(100vh - 107px); */
+}
+
+.hero-wrapper { 
+  display: flex;
+  position: relative;
+  gap: 44px;
+}
+
+
+
+.hero-title {
+  margin-top: 227px;
+  max-width: 634px;
+  font-family: Montserrat Bold;
+  font-weight: 700;
+  font-size: clamp(26px, 4.5vw, 48px);
+  line-height: 125%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.hero-description {
+  max-width: 634px;
+  margin-top: 44px;
+  font-family: Montserrat Regular;
+  font-weight: 400;
+  font-size: clamp(26px, 4.5vw, 40px);
+  line-height: 125%;
+  color: var(--dark);
+  margin-bottom: 0;
+}
+
+.hero-description > span:nth-child(2) {
+  margin-left: 11px;
+}
+
+.hero-btn {
+  max-width: 300px;
+  margin-left: 93px;
+}
+
+.hero-btn > p {
+  margin-top: 20px;
+  font-family: Montserrat Regular;
+  font-weight: 400;
+  font-size: clamp(16px, 4.5vw, 18px);
+  line-height: 150%;
+  color: var(--dark);
+}
+
+.hero-btn > button {
+  margin-top: 17px;
+  padding: 22px 30px;
+  box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.3);
+  background: var(--accent);
+  border: none;
+  font-family: Montserrat Bold;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--dark);
+  transition: .5s;
+}
+.hero-btn > button:hover {
+  color: var(--accent);
+  background: var(--dark);
+  box-shadow: 0 13px 24px 0 rgba(70, 86, 106, 0.2);
+}
+
+.hero-arrow {
+  margin-top: 184px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: clamp(40px, 4.5vw, 52px);
+  height: 55px;
+}
+
+.hero-bg {
+  border: 1px solid black;
+  flex-basis: 40%;
+  max-height: 915px;
+  opacity: 0.2;
+  background: linear-gradient(90deg, #fbf138 0%, rgba(253, 249, 182, 0.45) 100%);
+}
+
+.hero-wrapper > img {
+  position: absolute;
+  max-width: clamp(399px, 70vw, 996px);
+  /* top: 42px; */
+  bottom: 0;
+  right: -11vw;
 }
