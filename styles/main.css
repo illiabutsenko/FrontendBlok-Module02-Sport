@@ -90,7 +90,6 @@ a {
   font-size: 16px;
   line-height: 150%;
   color: var(--dark);
-  position: relative;
   margin-right: 2px;
 }
 
@@ -313,6 +312,205 @@ a {
   border: 1px solid transparent;
 }
 
+/* Form */
+
+.subscribe {
+  background-color: var(--light);
+  height: 348px;
+  margin-top: 162px;
+  border: 1px solid transparent;
+}
+
+.form {
+  display: flex;
+  max-width: 620px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-left: 17px;
+  gap: 20px;
+}
+
+.subscribe-title {
+  display: block;
+  max-width: 587px;
+  margin: 0 auto;
+  margin-top: 81px;
+  margin-bottom: 0;
+  position: relative;
+  font-family: Montserrat Bold;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--dark);
+  z-index: 0;
+}
+
+.subscribe-title::before {
+  content: '';
+  left: -35px;
+  top: -20px;
+  position: absolute;
+  background-color: var(--accent);
+  width: 53px;
+  height: 53px;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.subscribe-input {
+  flex-basis: calc(100% - 225px - 20px);
+}
+
+.subscribe-email {
+  font-family: Montserrat Regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--dark);
+  padding-left: 20px;
+  width: 351px;
+  height: 64px;
+  border: none;
+  outline: none;
+}
+
+.subscribe-email:focus {
+  border: 1px solid var(--accent);
+}
+
+.subscribe-email:invalid:focus {
+  border: 1px solid #AE0303;
+}
+
+.subscribe-btn {
+  flex-basis: 225px;
+  height: 65px;
+  box-shadow: 0 13px 24px 0 rgba(251, 241, 56, 0.2);
+  background: var(--accent);
+  border: none;
+  font-family: Montserrat Bold;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--dark);
+  transition:  var(--tr);
+}
+
+.subscribe-btn:hover {
+  box-shadow: 0 13px 24px 0 rgba(43, 53, 65, 0.2);
+  background: var(--dark);
+  color: var(--accent);
+}
+
+.agreement {
+  margin-top: 10px;
+  display: block;
+}
+
+.checkbox:checked,
+.checkbox:not(:checked){
+   position: absolute;
+   left:-9999px;
+}
+
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+   position: relative;
+   padding-left: 25px;
+   cursor:pointer;
+}
+
+/* Стили для псевдоэлемента before с фоном и обводкой, когда пункт активен */
+.checkbox:checked + label::before{
+   content:'';
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   left:0;
+   top:calc(50% - 10px);
+   background-color: #2B3541;
+   border-radius: 2px;
+   border: 2px solid #2B3541;
+}
+
+/* Стили для псевдоэлемента after с изображением, когда пункт активен */
+.checkbox:checked + label::after{
+   content:'';
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   transition: all .2s ease;
+   opacity: 1;
+   left: 4px;
+   top: calc(50% - 6px);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-image: url(../icons/check_box.svg);
+}
+
+/* Стили для псевдоэлемента before с фоном и обводкой, когда пункт НЕ активен */
+.checkbox:not(:checked) + label::before{
+   content:'';
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   left:0;
+   top:calc(50% - 10px);
+   background-color: transparent;
+   border-radius: 2px;
+   border: 2px solid #2B3541;
+}
+
+/* Стили для псевдоэлемента after с изображением, когда пункт НЕ активен */
+.checkbox:not(:checked) + label::after{
+   content:'';
+   position: absolute;
+   width: 12px;
+   height: 12px;
+   transition: all .2s ease;
+   opacity: 0;
+   left: 4px;
+   top: calc(50% - 6px);
+   background-position: 0 -12px;
+   background-color: transparent;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: url(../icons/check\ box\ empty.svg);
+}
+
+.radio:checked + label::before{
+   border-radius: 100%;
+}
+
+.checkbox {
+  opacity: 1;
+  width: 100px;
+}
+
+.label {
+  font-family: Montserrat Regular;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
+  color: rgba(43, 53, 65, .5);
+}
+
+.link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  font-family: Montserrat Regular;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
+  color: var(--dark);
+  opacity: 0.5;
+}
+
+.link:hover {
+  opacity: 1;
+}
 
 @media (max-width: 768px) {
   .menu-schedule {
