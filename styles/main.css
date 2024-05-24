@@ -58,6 +58,71 @@ a {
   display: none;
 }
 
+#modal {
+  position: absolute;
+  top: -500px;
+  width: 100%;
+  max-width: 587px;
+  left: 0;
+  right: 0;
+  height: 283px;
+  background-color: var(--light);
+  z-index: 2;
+  transition: var(--tr);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.modal-bottom {
+  position: absolute;
+  top: 284px;
+  left: 0;
+  right: 0;
+  height: 179px;
+  background-color: var(--dark);
+  opacity: .4;
+}
+
+#modal > .logo {
+  margin-top: 29px;
+  margin-left: 10px;
+}
+
+#modal > .nav-link {
+  position: absolute;
+  margin-left: 10px;
+  font-size: 16px;
+}
+#modal > .nav-link:nth-child(3) {
+  margin-top: 40px;
+}
+#modal > .nav-link:nth-child(4) {
+  margin-top: 100px;
+}
+#modal > .nav-link:nth-child(5) {
+  margin-top: 160px;
+}
+
+hr {
+  position: absolute;
+  width: 96%;
+  left: 10px;
+  color: var(--dark);
+  opacity: .2;
+}
+#modal > hr:nth-child(6) {
+  top: 130px;
+}
+#modal > hr:nth-child(7) {
+  top: 190px;
+}
+
+.close {
+  position: absolute;
+  top: 34px;
+  right: 10px;
+}
+
 .nav {
   flex-grow: 1;
   display: flex;
